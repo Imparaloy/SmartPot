@@ -6,22 +6,63 @@
     <title>Project Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Kanit', sans-serif;
+            scroll-behavior: smooth; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #F5F5F5;
+        }
+        main {
+            flex: 1; /* ใช้พื้นที่ที่เหลือระหว่าง header และ footer */
+        }
+        :root {
+            --primary-color: #1E90FF; 
+            --secondary-color: #2E4057; 
+            --highlight-color: #F4D03F; 
+            --background-color: #F5F5F5; 
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        .slide-up {
+            animation: slideUp 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-5 rounded-lg shadow-md mb-8">
-        <div class="container mx-auto">
-            <h1 class="text-center text-4xl font-bold">Project</h1>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="text-white p-5 shadow-md bg-gradient-to-r from-blue-500 to-blue-700 fade-in">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-semibold">Physical Computing Project 2024 - IT KMITL</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#project" class="nav-link">Project</a></li>
+                    <li><a href="#tools" class="nav-link">Tools</a></li>
+                    <li><a href="#asset" class="nav-link">Asset</a></li>
+                    <li><a href="#about-us" class="nav-link">About Us</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <main class="container mx-auto p-5">
-        <section class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105">
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-5 slide-up">
+        <!-- Project Section -->
+        <section id="project" class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105">
             <div class="md:w-3/5">
-                <h2 class="text-blue-700 font-bold text-2xl mb-4">ปัญหาที่ต้องการแก้ไข</h2>
+                <h2 class="section-title text-[#FF8C00]">ปัญหาที่ต้องการแก้ไข</h2>
                 <p class="leading-relaxed text-base mb-4">ปัญหาหลักที่โปรเจคนี้ต้องการแก้ไขคือการขาดการดูแลต้นไม้ที่ถูกต้องและเหมาะสมเนื่องจากคนส่วนใหญ่ไม่สามารถรู้ได้แน่ชัดว่าต้นไม้ต้องการน้ำมากหรือน้อยแค่ไหนในแต่ละช่วงเวลา</p>
                 <p class="leading-relaxed text-base">ซึ่งการรดน้ำมากเกินไปหรือน้อยเกินไปอาจส่งผลให้ต้นไม้ตายหรือเติบโตไม่เต็มที่ นอกจากนี้ยังมีปัญหาการดูแลต้นไม้ในกรณีที่ผู้ปลูกไม่อยู่บ้านหรือไม่มีเวลาพอในการตรวจสอบสภาพของดินและต้นไม้อย่างสม่ำเสมอ</p>
             </div>
@@ -29,55 +70,56 @@
                 <img src="/photo/tree.jpg" alt="Plant Image" class="w-64 h-64 object-cover rounded-xl shadow-md mx-auto">
             </div>
         </section>
-        <section class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105">
+
+        <section class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
             <div class="md:w-full">
-                <h2 class="text-blue-700 font-bold text-2xl mb-4">ความสำคัญของปัญหา</h2>
+                <h2 class="section-title text-[#FF8C00]">ความสำคัญของปัญหา</h2>
                 <p class="leading-relaxed text-base">ต้นไม้ต้องการความชื้นที่เหมาะสมในการเติบโตการดูแลที่ไม่ถูกต้องอาจทำให้ต้นไม้ไม่แข็งแรงหรือเสี่ยงต่อการเหี่ยวเฉาในกรณีที่ดินแห้งเกินไป การสร้างระบบที่สามารถช่วยตรวจสอบระดับความชื้นได้อย่างแม่นยำจะช่วยลดปัญหานี้และยังช่วยให้ผู้ที่รักการปลูกต้นไม้สามารถดูแลต้นไม้ได้แม้ว่าจะไม่ค่อยอยู่บ้านหรือติดภารกิจอื่น ๆ</p>
             </div>
         </section>
-        <section class="bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105">
-            <h2 class="text-blue-700 font-bold text-2xl mb-5 text-center">อุปกรณ์ที่ใช้</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center">
+
+        <!-- Tools Section -->
+        <section id="tools" class="bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
+            <h2 class="section-title text-center text-[#FF8C00]">อุปกรณ์ที่ใช้</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <img src="/photo/arduino.png" alt="Arduino R4" class="w-32 h-32 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
+                    <img src="/photo/arduino.png" alt="Arduino R4" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">Arduino R4</p>
                 </div>
                 <div class="text-center">
-                    <img src="/photo/resistor.png" alt="Resistors" class="w-32 h-32 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
+                    <img src="/photo/resistor.png" alt="Resistors" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">Resistors</p>
                 </div>
                 <div class="text-center">
-                    <img src="/photo/button.jpeg" alt="Button" class="w-32 h-32 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
+                    <img src="/photo/button.jpeg" alt="Button" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">Button</p>
                 </div>
                 <div class="text-center">
-                    <img src="/photo/led.png" alt="LED" class="w-32 h-32 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
+                    <img src="/photo/led.png" alt="LED" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">LED</p>
                 </div>
                 <div class="text-center">
-                    <img src="/photo/oled.png" alt="OLED Display" class="w-32 h-32 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
+                    <img src="/photo/oled.png" alt="OLED Display" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">OLED Display</p>
                 </div>
                 <div class="text-center">
-                    <img src="/photo/soil-moisture.png" alt="Soil Moisture Sensor" class="w-32 h-32 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
+                    <img src="/photo/soil-moisture.png" alt="Soil Moisture Sensor" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">Soil Moisture Sensor</p>
                 </div>
             </div>
-        </section>        
-        <section class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105">
-            <h2 class="text-blue-700 font-bold text-2xl mb-5">Asset</h2>
+        </section>
+
+        <!-- Asset Section -->
+        <section id="asset" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
+            <h2 class="section-title text-[#FF8C00]">Asset</h2>
             <div class="flex flex-wrap justify-center">
                 <a href="https://img.icons8.com/color/48/youtube-play.png" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/color/48/youtube-play.png" alt="Video Presentation" class="mx-auto">
                     <p class="mt-2 font-semibold">Video Presentation<br><small>YouTube Video</small></p>
                 </a>
-                <a href="https://img.icons8.com/ios-filled/50/source-code.png" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
+                <a href="https://github.com/Imparaloy/SmartPot" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/ios-filled/50/source-code.png" alt="Source Code" class="mx-auto">
                     <p class="mt-2 font-semibold">Source Code<br><small>SmartPot Repository</small></p>
-                </a>
-                <a href="https://img.icons8.com/fluency/48/domain.png" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
-                    <img src="https://img.icons8.com/fluency/48/domain.png" alt="Project Website" class="mx-auto">
-                    <p class="mt-2 font-semibold">Project Website<br><small>Website</small></p>
                 </a>
                 <a href="https://img.icons8.com/color/48/pdf.png" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/color/48/pdf.png" alt="Project Poster" class="mx-auto">
@@ -85,8 +127,10 @@
                 </a>
             </div>
         </section>
-        <section class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105">
-            <h2 class="text-blue-700 font-bold text-2xl mb-5">About Us</h2>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
+            <h2 class="section-title text-[#FF8C00]">About Us</h2>
             <div class="flex flex-wrap justify-center">
                 <div class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                     <img src="/photo/sunja.jpeg" alt="Member 1" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
@@ -103,9 +147,10 @@
             </div>
         </section>
     </main>
-    <footer class="text-center py-5 bg-blue-800 text-white font-semibold">
-        <p>2025 School of Information Technology, KMITL</p>
-    <p class="mt-3">&copy; 2025 All Rights Reserved</p>
+
+    <!-- Footer -->
+    <footer class="text-center text-white p-5 bg-gradient-to-r from-blue-500 to-blue-700 fade-in">
+        <p>&copy; 2025 School of Information Technology KMITL, All Rights Reserved</p>
     </footer>
 </body>
 </html>
