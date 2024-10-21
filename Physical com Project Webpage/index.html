@@ -44,10 +44,10 @@
 <body class="text-gray-800">
     <!-- Header -->
     <header class="text-white p-5 shadow-md bg-gradient-to-r from-blue-500 to-blue-700 fade-in">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-semibold">Physical Computing Project 2024 - IT KMITL</h1>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-2xl font-semibold mb-4 md:mb-0">Physical Computing Project 2024 - IT KMITL</h1>
             <nav>
-                <ul class="flex space-x-4">
+                <ul class="flex flex-wrap justify-center space-x-4">
                     <li><a href="#project" class="nav-link">Project</a></li>
                     <li><a href="#tools" class="nav-link">Tools</a></li>
                     <li><a href="#asset" class="nav-link">Asset</a></li>
@@ -61,27 +61,26 @@
     <main class="container mx-auto p-5 slide-up">
         <!-- Project Section -->
         <section id="project" class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105">
-            <div class="md:w-3/5">
+            <div class="md:w-3/5 w-full mb-6 md:mb-0">
                 <h2 class="section-title text-[#FF8C00]">ปัญหาที่ต้องการแก้ไข</h2>
                 <p class="leading-relaxed text-base mb-4">ปัญหาหลักที่โปรเจคนี้ต้องการแก้ไขคือการขาดการดูแลต้นไม้ที่ถูกต้องและเหมาะสมเนื่องจากคนส่วนใหญ่ไม่สามารถรู้ได้แน่ชัดว่าต้นไม้ต้องการน้ำมากหรือน้อยแค่ไหนในแต่ละช่วงเวลา</p>
                 <p class="leading-relaxed text-base">ซึ่งการรดน้ำมากเกินไปหรือน้อยเกินไปอาจส่งผลให้ต้นไม้ตายหรือเติบโตไม่เต็มที่ นอกจากนี้ยังมีปัญหาการดูแลต้นไม้ในกรณีที่ผู้ปลูกไม่อยู่บ้านหรือไม่มีเวลาพอในการตรวจสอบสภาพของดินและต้นไม้อย่างสม่ำเสมอ</p>
             </div>
-            <div class="md:w-2/5 flex justify-center items-center mt-5 md:mt-0">
+            <div class="md:w-2/5 w-full flex justify-center items-center">
                 <img src="/photo/tree.jpg" alt="Plant Image" class="w-64 h-64 object-cover rounded-xl shadow-md mx-auto">
             </div>
         </section>
 
-        <section class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
-            <div class="md:w-full">
-                <h2 class="section-title text-[#FF8C00]">ความสำคัญของปัญหา</h2>
-                <p class="leading-relaxed text-base">ต้นไม้ต้องการความชื้นที่เหมาะสมในการเติบโตการดูแลที่ไม่ถูกต้องอาจทำให้ต้นไม้ไม่แข็งแรงหรือเสี่ยงต่อการเหี่ยวเฉาในกรณีที่ดินแห้งเกินไป การสร้างระบบที่สามารถช่วยตรวจสอบระดับความชื้นได้อย่างแม่นยำจะช่วยลดปัญหานี้และยังช่วยให้ผู้ที่รักการปลูกต้นไม้สามารถดูแลต้นไม้ได้แม้ว่าจะไม่ค่อยอยู่บ้านหรือติดภารกิจอื่น ๆ</p>
-            </div>
+        <!-- Problem Importance Section -->
+        <section class="flex flex-col bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
+            <h2 class="section-title text-[#FF8C00]">ความสำคัญของปัญหา</h2>
+            <p class="leading-relaxed text-base">ต้นไม้ต้องการความชื้นที่เหมาะสมในการเติบโตการดูแลที่ไม่ถูกต้องอาจทำให้ต้นไม้ไม่แข็งแรงหรือเสี่ยงต่อการเหี่ยวเฉาในกรณีที่ดินแห้งเกินไป การสร้างระบบที่สามารถช่วยตรวจสอบระดับความชื้นได้อย่างแม่นยำจะช่วยลดปัญหานี้และยังช่วยให้ผู้ที่รักการปลูกต้นไม้สามารถดูแลต้นไม้ได้แม้ว่าจะไม่ค่อยอยู่บ้านหรือติดภารกิจอื่น ๆ</p>
         </section>
 
         <!-- Tools Section -->
         <section id="tools" class="bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
             <h2 class="section-title text-center text-[#FF8C00]">อุปกรณ์ที่ใช้</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <img src="/photo/arduino.png" alt="Arduino R4" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">Arduino R4</p>
@@ -112,16 +111,16 @@
         <!-- Asset Section -->
         <section id="asset" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
             <h2 class="section-title text-[#FF8C00]">Asset</h2>
-            <div class="flex flex-wrap justify-center">
-                <a href="https://img.icons8.com/color/48/youtube-play.png" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://img.icons8.com/color/48/youtube-play.png" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/color/48/youtube-play.png" alt="Video Presentation" class="mx-auto">
                     <p class="mt-2 font-semibold">Video Presentation<br><small>YouTube Video</small></p>
                 </a>
-                <a href="https://github.com/Imparaloy/SmartPot" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
+                <a href="https://github.com/Imparaloy/SmartPot" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/ios-filled/50/source-code.png" alt="Source Code" class="mx-auto">
                     <p class="mt-2 font-semibold">Source Code<br><small>SmartPot Repository</small></p>
                 </a>
-                <a href="https://img.icons8.com/color/48/pdf.png" class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
+                <a href="https://img.icons8.com/color/48/pdf.png" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/color/48/pdf.png" alt="Project Poster" class="mx-auto">
                     <p class="mt-2 font-semibold">Project Poster<br><small>Download PDF</small></p>
                 </a>
@@ -131,16 +130,16 @@
         <!-- About Us Section -->
         <section id="about-us" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
             <h2 class="section-title text-[#FF8C00]">About Us</h2>
-            <div class="flex flex-wrap justify-center">
-                <div class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                     <img src="/photo/sunja.jpeg" alt="Member 1" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
                     <p class="font-semibold mt-3">นายกุลสุก ภูริบงคล<br>66070165</p>
                 </div>
-                <div class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                     <img src="/photo/polor.jpeg" alt="Member 2" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
                     <p class="font-semibold mt-3">นางสาวศิริกุล คำมุง<br>66070192</p>
                 </div>
-                <div class="w-1/2 md:w-1/4 p-5 m-2 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                     <img src="/photo/aa.jpeg" alt="Member 3" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
                     <p class="font-semibold mt-3">นายศุภณัฐ อรุณ<br>66070165</p>
                 </div>
