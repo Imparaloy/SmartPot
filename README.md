@@ -33,6 +33,23 @@
 
 อาจารย์ประจำคณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
 
-## Tools
+## Asset
+Website Project Presentation : [Physical Computing Project - Smartpot]
+(https://websitesmartpot.vercel.app/)
+Youtube Presentation : 
+PDF :
 
-## Source
+## Tools 
+
+ 1. Arduino R4
+![Arduino UNO R4 WiFi (แท้ 100% Italy) - Arduino, Raspberry Pi, NodeMCU, IoT,  Nvidia, Lora, AI, Machine Learning, Teensy, Lidar : Inspired by LnwShop.com](https://o.lnwfile.com/_/o/_raw/si/cq/o8.jpg)
+ 2. Resistors
+![TE Connectivity 10kΩ Carbon Film Resistor 1W ±5% CFR100J10K](https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.625,f_auto,h_214,q_auto,w_380/c_pad,h_214,w_380/R0131895-01?pgw=1)
+ 3. Button
+![Arduino Button With No Resistor : 4 Steps (with Pictures) - Instructables](https://content.instructables.com/FSB/5Q9P/IBL628Y3/FSB5Q9PIBL628Y3.jpg?auto=webp&frame=1&width=320&md=MjAxNS0wNy0wMSAxNjo1MDo1Ni4w)
+ 4. LED
+![LED 5 MM หลอดสี 10 ชิ้น](https://down-th.img.susercontent.com/file/adc812a9fc162bf5ed74a7543bd6f991)
+ 5. OLED Display
+![OLED Display (0.96 in, 128x64, IIC)](https://www.smart-prototyping.com/image/cache/data/9_Modules/101864%200.96%20IIC/1-750x750.jpg)
+ 6. Soil Moisture Sensor
+![วัดความชื้นในดิน Soil Moisture Sensor Module - Arduino-Indy : Inspired by  LnwShop.com](https://inwfile.com/s-gd/5q8agf.png)
