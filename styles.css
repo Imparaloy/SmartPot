@@ -1,0 +1,37 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+main {
+    flex: 1; /* ใช้พื้นที่ที่เหลือระหว่าง header และ footer */
+}
+:root {
+    --primary-color: #1E90FF; 
+    --secondary-color: #2E4057; 
+    --highlight-color: #F4D03F; 
+    --background-color: #F5F5F5; 
+}
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+.slide-up {
+    animation: slideUp 1.5s ease-out;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+.section-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
