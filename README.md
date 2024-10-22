@@ -35,7 +35,7 @@
 
 ## Asset
 Website Project Presentation : [Physical Computing Project - Smartpot]
-()
+(https://imparaloy.github.io/SmartPot/)
 
 Youtube Presentation : 
 
