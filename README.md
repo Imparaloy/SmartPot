@@ -38,4 +38,4 @@ Website Project Presentation : [Physical Computing Project - Smartpot]
 
 Youtube Presentation : 
 
-PDF :
+PDF : Presentation Make by Adobe Photoshop and Adobe Illustrator (https://drive.google.com/drive/folders/1HB15GF5zjivudb3hpyfc0vCiSel0x6Lv?usp=drive_link)
