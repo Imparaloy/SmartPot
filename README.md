@@ -37,6 +37,6 @@
 Website Project Presentation : [Physical Computing Project - Smartpot]
 (https://imparaloy.github.io/SmartPot/)
 
-Youtube Presentation : 
+Youtube Presentation : Presentation Video (https://youtu.be/DEFCE7mM9Ak)
 
 PDF : Presentation Make by Adobe Photoshop and Adobe Illustrator (https://drive.google.com/drive/folders/1HB15GF5zjivudb3hpyfc0vCiSel0x6Lv?usp=drive_link)
