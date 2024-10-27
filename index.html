@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Page</title>
+    <title>Physical Computing Project 2024 - IT KMITL</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
@@ -17,7 +17,7 @@
             background-color: #F5F5F5;
         }
         main {
-            flex: 1; /* ใช้พื้นที่ที่เหลือระหว่าง header และ footer */
+            flex: 1;
         }
         :root {
             --primary-color: #1E90FF; 
@@ -42,6 +42,7 @@
     </style>
 </head>
 <body class="text-gray-800">
+
     <!-- Header -->
     <header class="text-white p-5 shadow-md bg-gradient-to-r from-blue-500 to-blue-700 fade-in">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -59,6 +60,7 @@
 
     <!-- Main Content -->
     <main class="container mx-auto p-5 slide-up">
+        
         <!-- Project Section -->
         <section id="project" class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105">
             <div class="md:w-3/5 w-full mb-6 md:mb-0">
@@ -76,32 +78,45 @@
             <h2 class="section-title text-[#FF8C00]">ความสำคัญของปัญหา</h2>
             <p class="leading-relaxed text-base">ต้นไม้ต้องการความชื้นที่เหมาะสมในการเติบโตการดูแลที่ไม่ถูกต้องอาจทำให้ต้นไม้ไม่แข็งแรงหรือเสี่ยงต่อการเหี่ยวเฉาในกรณีที่ดินแห้งเกินไป การสร้างระบบที่สามารถช่วยตรวจสอบระดับความชื้นได้อย่างแม่นยำจะช่วยลดปัญหานี้และยังช่วยให้ผู้ที่รักการปลูกต้นไม้สามารถดูแลต้นไม้ได้แม้ว่าจะไม่ค่อยอยู่บ้านหรือติดภารกิจอื่น ๆ</p>
         </section>
+
         <!-- Project Progress Section -->
         <section id="progress" class="bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
-            <h2 class="section-title text-[#FF8C00] text-center">Project Progress</h2>
+            <h2 class="section-title text-[#FF8C00] text-center mb-6">ความคืบหน้าโครงการ</h2>
             
-            <!-- Description of Steps Taken -->
             <div class="mt-6">
-                <h3 class="text-lg font-semibold text-gray-900">Steps Taken</h3>
-                <p class="leading-relaxed text-base mb-4">
-                    
-                </p>
-            </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">รายละเอียดขั้นตอนที่ดำเนินการ</h3>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-[#1E90FF] mb-2">การระบุปัญหา</h4>
+                    <p class="leading-relaxed text-base mb-4">เราเริ่มต้นด้วยการค้นคว้าปัญหาทั่วไปที่เกิดขึ้นในการดูแลต้นไม้ โดยเน้นไปที่การรดน้ำที่ไม่สม่ำเสมอซึ่งมาจากการขาดความรู้เกี่ยวกับระดับความชื้นในดิน ซึ่งเป็นปัจจัยสำคัญที่ส่งผลต่อสุขภาพของต้นไม้ โดยเฉพาะสำหรับคนที่มีตารางเวลาที่แน่น</p>
+                </div>
 
-            <!-- Challenges and Solutions -->
-            <div class="mt-6">
-                <h3 class="text-lg font-semibold text-gray-900">Challenges and Solutions</h3>
-                <p class="leading-relaxed text-base mb-4">
-                    ปัญหาหลักที่เราพบระหว่างพัฒนา คือการเชื่อมต่อเซนเซอร์กับอุปกรณ์การวัดผล เนื่องจากค่าที่อ่านได้มีการผันผวน เราจึงทดลองเปลี่ยนเซนเซอร์และปรับวิธีการคำนวณค่าความชื้น เพื่อให้ค่าที่อ่านได้นั้นแม่นยำมากขึ้น
-                </p>
-            </div>
+                <div class="mb-6">
+                    <h4 class="font-semibold text-[#1E90FF] mb-2">การวางแผนการแก้ปัญหา</h4>
+                    <p class="leading-relaxed text-base mb-4">หลังจากเข้าใจปัญหาแล้ว เราวางแผนพัฒนาระบบที่ใช้บอร์ด Arduino และเซนเซอร์วัดความชื้นในดิน เป้าหมายของเราคือสร้างอุปกรณ์ที่สามารถตรวจสอบความชื้นในดินได้อย่างแม่นยำและแจ้งเตือนผู้ใช้เมื่อต้นไม้ต้องการน้ำ</p>
+                </div>
 
-            <!-- Current Status and Future Goals -->
-            <div class="mt-6">
-                <h3 class="text-lg font-semibold text-gray-900">Current Status and Future Goals</h3>
-                <p class="leading-relaxed text-base">
-                    ตอนนี้ระบบสามารถตรวจวัดค่าความชื้นในดินและสามารถแสดงผลทางจอ OLED เป็นหน้าตาอิโมจิได้เรียบร้อย แต่ยังต้องพัฒนาในเรื่องของการเพิ่มระบบแจ้งเตือนผ่านแอพมือถือเพื่อให้ผู้ใช้งานสะดวกมากขึ้น
-                </p>
+                <div class="mb-6">
+                    <h4 class="font-semibold text-[#1E90FF] mb-2">การสร้างต้นแบบ</h4>
+                    <p class="leading-relaxed text-base mb-4">ขั้นตอนถัดไปคือการประกอบอุปกรณ์ที่จำเป็น ได้แก่ บอร์ด Arduino เซนเซอร์ และอุปกรณ์อิเล็กทรอนิกส์อื่น ๆ เราทำการเชื่อมต่อและทดสอบวงจรเบื้องต้นเพื่อให้แน่ใจว่าอุปกรณ์ทำงานได้ตามต้องการ</p>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="font-semibold text-[#1E90FF] mb-2">การเขียนโค้ดและการทดสอบ</h4>
+                    <p class="leading-relaxed text-base mb-4">เมื่อฮาร์ดแวร์พร้อมแล้ว เราเขียนโค้ดให้ Arduino สามารถอ่านค่าความชื้นและส่งการแจ้งเตือนได้ ขั้นตอนการทดสอบมีการปรับค่าให้เหมาะสมกับสภาพดินและสภาพแวดล้อมที่แตกต่างกัน เพื่อให้ค่าที่ได้มีความเสถียร</p>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="font-semibold text-[#1E90FF] mb-2">การแก้ไขปัญหา</h4>
+                    <p class="leading-relaxed text-base mb-4">เราพบปัญหาการตั้งค่าความไวของเซนเซอร์ที่ส่งผลให้ค่าที่อ่านได้ไม่แม่นยำ ในการแก้ไขปัญหานี้ เราได้ปรับตำแหน่งเซนเซอร์และปรับโค้ดเพื่อเพิ่มความแม่นยำ จนกระทั่งได้ค่าความชื้นที่เสถียรและเชื่อถือได้</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-[#1E90FF] mb-2">สถานะปัจจุบัน</h4>
+                   
+
+ <p class="leading-relaxed text-base mb-4">ระบบสามารถตรวจวัดค่าความชื้นในดินและสามารถแสดงสถานะของต้นไม้ผ่านทางหน้าจอ OLED ได้เสร็จสิ้นตามจุดประสงค์ที่เราต้องการแล้ว ในอนาคตเราสามารถพัฒนาเพิ่มการแจ้งเตือนในโทรศัพท์เพื่อความสะดวกสบายของผู้ใช้งานมากขึ้น</p>
+                </div>
             </div>
         </section>
 
@@ -109,6 +124,7 @@
         <section id="tools" class="bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
             <h2 class="section-title text-center text-[#FF8C00]">อุปกรณ์ที่ใช้</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Repeatable structure for each tool -->
                 <div class="text-center">
                     <img src="photo/arduino.png" alt="Arduino R4" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
                     <p class="font-semibold mt-4">Arduino R4</p>
@@ -140,7 +156,8 @@
         <section id="asset" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
             <h2 class="section-title text-[#FF8C00]">Asset</h2>
             <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://img.icons8.com/color/48/youtube-play.png" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
+                <!-- Repeatable structure for each asset link -->
+                <a href="https://www.youtube.com/watch?v=DEFCE7mM9Ak" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/color/48/youtube-play.png" alt="Video Presentation" class="mx-auto">
                     <p class="mt-2 font-semibold">Video Presentation<br><small>YouTube Video</small></p>
                 </a>
@@ -159,6 +176,7 @@
         <section id="about-us" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
             <h2 class="section-title text-[#FF8C00]">About Us</h2>
             <div class="flex flex-wrap justify-center gap-6">
+                <!-- Repeatable structure for each team member -->
                 <div class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                     <img src="photo/sunja.jpeg" alt="Member 1" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
                     <p class="font-semibold mt-3">นายภูสฤก ภูริมงคล<br>66070165</p>
@@ -182,5 +200,6 @@
     <footer class="text-center text-white p-5 bg-gradient-to-r from-blue-500 to-blue-700 fade-in">
         <p>&copy; 2025 School of Information Technology KMITL, All Rights Reserved</p>
     </footer>
+
 </body>
 </html>
