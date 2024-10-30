@@ -5,191 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physical Computing Project 2024 - IT KMITL</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-            scroll-behavior: smooth; 
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #F5F5F5;
-        }
-        main {
-            flex: 1;
-        }
-        :root {
-            --primary-color: #1E90FF; 
-            --secondary-color: #2E4057; 
-            --highlight-color: #F4D03F; 
-            --background-color: #F5F5F5; 
-        }
-        .fade-in {
-            animation: fadeIn 2s ease-in;
-        }
-        .slide-up {
-            animation: slideUp 1.5s ease-out;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes slideUp {
-            0% { transform: translateY(20px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
 </head>
 <body class="text-gray-800">
 
     <!-- Header -->
-    <header class="text-white p-5 shadow-md bg-gradient-to-r from-blue-500 to-blue-700 fade-in">
+    <header class="text-white p-5 shadow-md bg-gradient-to-r from-blue-500 to-blue-700 fade-in-smooth">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <h1 class="text-2xl font-semibold mb-4 md:mb-0">Physical Computing Project 2024 - IT KMITL</h1>
+            <h1 class="text-base font-normal mb-4 md:mb-0">Physical Computing Project 2024 - IT KMITL</h1>
             <nav>
-                <ul class="flex flex-wrap justify-center space-x-4">
-                    <li><a href="#project" class="nav-link">Project</a></li>
-                    <li><a href="#tools" class="nav-link">Tools</a></li>
-                    <li><a href="#asset" class="nav-link">Asset</a></li>
-                    <li><a href="#about-us" class="nav-link">About Us</a></li>
+                <ul class="flex flex-wrap justify-center space-x-6">
+                    <li><a href="#project" class="nav-link hover:text-yellow-300">Project</a></li>
+                    <li><a href="#tools" class="nav-link hover:text-yellow-300">Tools</a></li>
+                    <li><a href="#asset" class="nav-link hover:text-yellow-300">Asset</a></li>
+                    <li><a href="#about-us" class="nav-link hover:text-yellow-300">About Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto p-5 slide-up">
+    <main class="container mx-auto p-5 slide-up-smooth">
         
         <!-- Project Section -->
-        <section id="project" class="flex flex-col md:flex-row justify-between items-start bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105">
+        <section id="project" class="card flex flex-col md:flex-row justify-between items-start mb-8">
             <div class="md:w-3/5 w-full mb-6 md:mb-0">
-                <h2 class="section-title text-[#FF8C00]">ปัญหาที่ต้องการแก้ไข</h2>
+                <h2 class="section-title">ปัญหาที่ต้องการแก้ไข</h2>
                 <p class="leading-relaxed text-base mb-4">ปัญหาหลักที่โปรเจคนี้ต้องการแก้ไขคือการขาดการดูแลต้นไม้ที่ถูกต้องและเหมาะสมเนื่องจากคนส่วนใหญ่ไม่สามารถรู้ได้แน่ชัดว่าต้นไม้ต้องการน้ำมากหรือน้อยแค่ไหนในแต่ละช่วงเวลา</p>
                 <p class="leading-relaxed text-base">ซึ่งการรดน้ำมากเกินไปหรือน้อยเกินไปอาจส่งผลให้ต้นไม้ตายหรือเติบโตไม่เต็มที่ นอกจากนี้ยังมีปัญหาการดูแลต้นไม้ในกรณีที่ผู้ปลูกไม่อยู่บ้านหรือไม่มีเวลาพอในการตรวจสอบสภาพของดินและต้นไม้อย่างสม่ำเสมอ</p>
+                <a href="#progress" class="btn-primary mt-4 inline-block">ดูความคืบหน้าโครงการ</a>
             </div>
             <div class="md:w-2/5 w-full flex justify-center items-center">
-                <img src="photo/tree.jpg" alt="Plant Image" class="w-64 h-64 object-cover rounded-xl shadow-md mx-auto">
+                <img src="photo/tree.jpg" alt="Plant Image" class="w-72 h-72 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300">
             </div>
         </section>
 
         <!-- Problem Importance Section -->
-        <section class="flex flex-col bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
-            <h2 class="section-title text-[#FF8C00]">ความสำคัญของปัญหา</h2>
-            <p class="leading-relaxed text-base">ต้นไม้ต้องการความชื้นที่เหมาะสมในการเติบโตการดูแลที่ไม่ถูกต้องอาจทำให้ต้นไม้ไม่แข็งแรงหรือเสี่ยงต่อการเหี่ยวเฉาในกรณีที่ดินแห้งเกินไป การสร้างระบบที่สามารถช่วยตรวจสอบระดับความชื้นได้อย่างแม่นยำจะช่วยลดปัญหานี้และยังช่วยให้ผู้ที่รักการปลูกต้นไม้สามารถดูแลต้นไม้ได้แม้ว่าจะไม่ค่อยอยู่บ้านหรือติดภารกิจอื่น ๆ</p>
+        <section class="card flex flex-col mb-8 slide-up-smooth">
+            <h2 class="section-title">ความสำคัญของปัญหา</h2>
+            <p class="leading-relaxed text-base">ต้นไม้ต้องการความชื้นที่เหมาะสมในการเติบโต การดูแลที่ไม่ถูกต้องอาจทำให้ต้นไม้ไม่แข็งแรงหรือเสี่ยงต่อการเหี่ยวเฉาในกรณีที่ดินแห้งเกินไป การสร้างระบบที่สามารถช่วยตรวจสอบระดับความชื้นได้อย่างแม่นยำจะช่วยลดปัญหานี้และยังช่วยให้ผู้ที่รักการปลูกต้นไม้สามารถดูแลต้นไม้ได้แม้ว่าจะไม่ค่อยอยู่บ้านหรือติดภารกิจอื่น ๆ</p>
         </section>
 
         <!-- Project Progress Section -->
-        <section id="progress" class="bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
-            <h2 class="section-title text-[#FF8C00] text-center mb-6">ความคืบหน้าโครงการ</h2>
+        <section id="progress" class="card mb-8 slide-up-smooth">
+            <h2 class="section-title text-center mb-6">ความคืบหน้าโครงการ</h2>
             
             <div class="mt-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">รายละเอียดขั้นตอนที่ดำเนินการ</h3>
+                <h3 class="text-base font-normal text-gray-900 mb-4">รายละเอียดขั้นตอนที่ดำเนินการ</h3>
                 
                 <div class="mb-6">
-                    <h4 class="font-semibold text-[#1E90FF] mb-2">การระบุปัญหา</h4>
+                    <h4 class="font-normal text-[#1E90FF] mb-2">การระบุปัญหา</h4>
                     <p class="leading-relaxed text-base mb-4">เราเริ่มต้นด้วยการค้นคว้าปัญหาทั่วไปที่เกิดขึ้นในการดูแลต้นไม้ โดยเน้นไปที่การรดน้ำที่ไม่สม่ำเสมอซึ่งมาจากการขาดความรู้เกี่ยวกับระดับความชื้นในดิน ซึ่งเป็นปัจจัยสำคัญที่ส่งผลต่อสุขภาพของต้นไม้ โดยเฉพาะสำหรับคนที่มีตารางเวลาที่แน่น</p>
                 </div>
 
                 <div class="mb-6">
-                    <h4 class="font-semibold text-[#1E90FF] mb-2">การวางแผนการแก้ปัญหา</h4>
+                    <h4 class="font-normal text-[#1E90FF] mb-2">การวางแผนการแก้ปัญหา</h4>
                     <p class="leading-relaxed text-base mb-4">หลังจากเข้าใจปัญหาแล้ว เราวางแผนพัฒนาระบบที่ใช้บอร์ด Arduino และเซนเซอร์วัดความชื้นในดิน เป้าหมายของเราคือสร้างอุปกรณ์ที่สามารถตรวจสอบความชื้นในดินได้อย่างแม่นยำและแจ้งเตือนผู้ใช้เมื่อต้นไม้ต้องการน้ำ</p>
                 </div>
-
+                
                 <div class="mb-6">
-                    <h4 class="font-semibold text-[#1E90FF] mb-2">การสร้างต้นแบบ</h4>
+                    <h4 class="font-normal text-[#1E90FF] mb-2">การสร้างต้นแบบ</h4>
                     <p class="leading-relaxed text-base mb-4">ขั้นตอนถัดไปคือการประกอบอุปกรณ์ที่จำเป็น ได้แก่ บอร์ด Arduino เซนเซอร์ และอุปกรณ์อิเล็กทรอนิกส์อื่น ๆ เราทำการเชื่อมต่อและทดสอบวงจรเบื้องต้นเพื่อให้แน่ใจว่าอุปกรณ์ทำงานได้ตามต้องการ</p>
                 </div>
 
                 <div class="mb-6">
-                    <h4 class="font-semibold text-[#1E90FF] mb-2">การเขียนโค้ดและการทดสอบ</h4>
+                    <h4 class="font-normal text-[#1E90FF] mb-2">การเขียนโค้ดและการทดสอบ</h4>
                     <p class="leading-relaxed text-base mb-4">เมื่อฮาร์ดแวร์พร้อมแล้ว เราเขียนโค้ดให้ Arduino สามารถอ่านค่าความชื้นและส่งการแจ้งเตือนได้ ขั้นตอนการทดสอบมีการปรับค่าให้เหมาะสมกับสภาพดินและสภาพแวดล้อมที่แตกต่างกัน เพื่อให้ค่าที่ได้มีความเสถียร</p>
                 </div>
 
                 <div class="mb-6">
-                    <h4 class="font-semibold text-[#1E90FF] mb-2">การแก้ไขปัญหา</h4>
+                    <h4 class="font-normal text-[#1E90FF] mb-2">การแก้ไขปัญหา</h4>
                     <p class="leading-relaxed text-base mb-4">เราพบปัญหาการตั้งค่าความไวของเซนเซอร์ที่ส่งผลให้ค่าที่อ่านได้ไม่แม่นยำ ในการแก้ไขปัญหานี้ เราได้ปรับตำแหน่งเซนเซอร์และปรับโค้ดเพื่อเพิ่มความแม่นยำ จนกระทั่งได้ค่าความชื้นที่เสถียรและเชื่อถือได้</p>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold text-[#1E90FF] mb-2">สถานะปัจจุบัน</h4>
-                   
-
- <p class="leading-relaxed text-base mb-4">ระบบสามารถตรวจวัดค่าความชื้นในดินและสามารถแสดงสถานะของต้นไม้ผ่านทางหน้าจอ OLED ได้เสร็จสิ้นตามจุดประสงค์ที่เราต้องการแล้ว ในอนาคตเราสามารถพัฒนาเพิ่มการแจ้งเตือนในโทรศัพท์เพื่อความสะดวกสบายของผู้ใช้งานมากขึ้น</p>
+                    <h4 class="font-normal text-[#1E90FF] mb-2">สถานะปัจจุบัน</h4>
+                    <p class="leading-relaxed text-base mb-4">ระบบสามารถตรวจวัดค่าความชื้นในดินและสามารถแสดงสถานะของต้นไม้ผ่านทางหน้าจอ OLED ได้เสร็จสิ้นตามจุดประสงค์ที่เราต้องการแล้ว ในอนาคตเราสามารถพัฒนาเพิ่มการแจ้งเตือนในโทรศัพท์เพื่อความสะดวกสบายของผู้ใช้งานมากขึ้น</p>
                 </div>
             </div>
         </section>
 
         <!-- Tools Section -->
-        <section id="tools" class="bg-white p-8 rounded-lg shadow-lg mb-8 transition-transform transform hover:scale-105 slide-up">
-            <h2 class="section-title text-center text-[#FF8C00]">อุปกรณ์ที่ใช้</h2>
+        <section id="tools" class="card mb-8 slide-up-smooth">
+            <h2 class="section-title text-center">อุปกรณ์ที่ใช้</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <!-- Repeatable structure for each tool -->
-                <div class="text-center">
+                <div class="card text-center">
                     <img src="photo/arduino.png" alt="Arduino R4" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
-                    <p class="font-semibold mt-4">Arduino R4</p>
+                    <p class="font-normal mt-4">Arduino R4</p>
                 </div>
-                <div class="text-center">
+                <div class="card text-center">
                     <img src="photo/resistor.png" alt="Resistors" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
-                    <p class="font-semibold mt-4">Resistors</p>
+                    <p class="font-normal mt-4">Resistors</p>
                 </div>
-                <div class="text-center">
+                <div class="card text-center">
                     <img src="photo/button.jpeg" alt="Button" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
-                    <p class="font-semibold mt-4">Button</p>
+                    <p class="font-normal mt-4">Button</p>
                 </div>
-                <div class="text-center">
+                <div class="card text-center">
                     <img src="photo/led.png" alt="LED" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
-                    <p class="font-semibold mt-4">LED</p>
+                    <p class="font-normal mt-4">LED</p>
                 </div>
-                <div class="text-center">
+                <div class="card text-center">
                     <img src="photo/oled.png" alt="OLED Display" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
-                    <p class="font-semibold mt-4">OLED Display</p>
+                    <p class="font-normal mt-4">OLED Display</p>
                 </div>
-                <div class="text-center">
+                <div class="card text-center">
                     <img src="photo/soil-moisture.png" alt="Soil Moisture Sensor" class="w-40 h-40 object-cover rounded-xl shadow-md mx-auto hover:scale-110 transition-transform duration-300">
-                    <p class="font-semibold mt-4">Soil Moisture Sensor</p>
+                    <p class="font-normal mt-4">Soil Moisture Sensor</p>
                 </div>
             </div>
         </section>
 
         <!-- Asset Section -->
-        <section id="asset" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
-            <h2 class="section-title text-[#FF8C00]">Asset</h2>
+        <section id="asset" class="card mb-8 text-center slide-up-smooth">
+            <h2 class="section-title">Asset</h2>
             <div class="flex flex-wrap justify-center gap-6">
                 <!-- Repeatable structure for each asset link -->
                 <a href="https://www.youtube.com/watch?v=DEFCE7mM9Ak" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/color/48/youtube-play.png" alt="Video Presentation" class="mx-auto">
-                    <p class="mt-2 font-semibold">Video Presentation<br><small>YouTube Video</small></p>
+                    <p class="mt-2 font-normal">Video Presentation<br><small>YouTube Video</small></p>
                 </a>
                 <a href="https://github.com/Imparaloy/SmartPot" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/ios-filled/50/source-code.png" alt="Source Code" class="mx-auto">
-                    <p class="mt-2 font-semibold">Source Code<br><small>SmartPot Repository</small></p>
+                    <p class="mt-2 font-normal">Source Code<br><small>SmartPot Repository</small></p>
                 </a>
                 <a href="https://drive.google.com/drive/folders/1HB15GF5zjivudb3hpyfc0vCiSel0x6Lv?usp=sharing" class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow block text-center" target="_blank">
                     <img src="https://img.icons8.com/color/48/pdf.png" alt="Project Poster" class="mx-auto">
-                    <p class="mt-2 font-semibold">Project Poster<br><small>Download PDF</small></p>
-                </a>
+                    <p class="mt-2 font-normal">Project Poster<br><small>Download PDF</small></p>
+                </a>              
             </div>
         </section>
 
         <!-- About Us Section -->
-        <section id="about-us" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center transition-transform transform hover:scale-105 slide-up">
-            <h2 class="section-title text-[#FF8C00]">About Us</h2>
+        <section id="about-us" class="card mb-8 text-center slide-up-smooth">
+            <h2 class="section-title">About Us</h2>
             <div class="flex flex-wrap justify-center gap-6">
                 <!-- Repeatable structure for each team member -->
                 <div class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <img src="photo/sunja.jpeg" alt="Member 1" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
-                    <p class="font-semibold mt-3">นายภูสฤก ภูริมงคล<br>66070165</p>
+                    <img src="photo/sunja.jpeg" alt="Member 1" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto hover:scale-105 transition-transform duration-300">
+                    <p class="font-normal mt-3">นายภูสฤก ภูริมงคล<br>66070165</p>
                     <p>ติดตั้งและเชื่อมต่ออุปกรณ์ Arduino</p>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <img src="photo/polor.jpeg" alt="Member 2" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
-                    <p class="font-semibold mt-3">นางสาวศิริกุล คำมุง<br>66070192</p>
+                    <img src="photo/polor.jpeg" alt="Member 2" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto hover:scale-105 transition-transform duration-300">
+                    <p class="font-normal mt-3">นางสาวศิริกุล คำมุง<br>66070192</p>
                     <p>จัดทำหน้าเว็บและออกแบบโปสเตอร์</p>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/4 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <img src="photo/aa.jpeg" alt="Member 3" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto">
-                    <p class="font-semibold mt-3">นายศุภณัฐ อรุณ<br>66070165</p>
+                    <img src="photo/aa.jpeg" alt="Member 3" class="w-40 h-40 object-cover rounded-full shadow-md mx-auto hover:scale-105 transition-transform duration-300">
+                    <p class="font-normal mt-3">นายศุภณัฐ อรุณ<br>66070165</p>
                     <p>เขียนโปรแกรมให้อุปกรณ์ Arduino</p>
                 </div>
             </div>
@@ -197,7 +164,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-white p-5 bg-gradient-to-r from-blue-500 to-blue-700 fade-in">
+    <footer class="text-center text-white p-5 bg-gradient-to-r from-blue-500 to-blue-700 fade-in-smooth">
         <p>&copy; 2025 School of Information Technology KMITL, All Rights Reserved</p>
     </footer>
 
